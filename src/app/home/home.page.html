@@ -1,0 +1,47 @@
+<ion-content color="danger">
+  <ion-header>
+    <ion-toolbar >
+     <ion-title color="blue">
+      Create Profile
+    </ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-icon name="add-circle" style="font-size: 130px;color:dodgerblue "></ion-icon>
+   
+    <ion-card-title style="font-size:x-large; color: tomato;" >
+      Add a profile picture
+    </ion-card-title>
+  </ion-card>
+  <ion-card >
+    <ion-card-title style="color: tomato;">
+      Personal Information
+     </ion-card-title>
+   
+    <div class="login-form-ion-padding">
+    
+      <div class="form-input">
+        
+     
+        <ion-item lines="full">
+    
+          <ion-input placeholder="Firstname" ></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-input  placeholder="Lastname"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-input  placeholder="Email"></ion-input>
+        </ion-item>
+       <ion-item lines="full">
+        <ion-input  placeholder="Phonenumber"></ion-input>
+       </ion-item>
+       
+        
+        <ion-button id="btn" (click)="_openLocation($event)" expand="full"  class="ion-margin-top">
+          Location
+        </ion-button>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>
