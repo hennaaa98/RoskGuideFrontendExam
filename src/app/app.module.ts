@@ -6,10 +6,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Camera } from '@ionic-native/camera/ngx';
+import { LocationComponent } from './components/location/location.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LocationComponent],
   entryComponents: [],
   imports: [
     BrowserModule, 
@@ -18,8 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     BrowserAnimationsModule,
   ],
   providers: [
+    Camera,
    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
