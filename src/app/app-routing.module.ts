@@ -14,6 +14,10 @@ const routes: Routes = [
   { 
     path: 'map', component: Tab1Page,
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'startpage',
+    loadChildren: () => import('./startpage/startpage.module').then( m => m.StartpagePageModule)
   }
 ];
 @NgModule({
