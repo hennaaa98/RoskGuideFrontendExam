@@ -1,11 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title class="center-title">
-      Roskilde Tour Map
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <h1>Hello, Sofia</h1>
+    </ion-col>
+  </ion-row>
 
-<ion-content [fullscreen]="true">
-  <div #map id="map"></div>
+  <ion-row>
+    <ion-col class="padding">
+      <ion-icon name="star-outline"></ion-icon>
+      <span class="fav">Favorite locations</span>
+    </ion-col>
+  </ion-row>
+
+  <div class="fav-container">
+    <ion-row>
+      <span class="fav-padding" *ngIf="favorites==null">
+        You don't have any favorites yet!
+      </span>
+    </ion-row>
+
+    <div *ngIf="favorites">
+      <div *ngFor="let favorite of favorites">
+        <ion-row>
+          <ion-card>    
+            <ion-card-content>
+              <img src={{favorite.img}}>
+            </ion-card-content>
+            <ion-card-header>
+              <ion-card-title>{{favorite.title}}</ion-card-title>
+            </ion-card-header>
+          </ion-card>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-container">
+    <ion-row>
+      <ion-col class="padding">
+        <ion-icon name="star-outline"></ion-icon>
+        <span class="fav">Favorite memories</span>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <span class="fav-padding" *ngIf="favorites==null">
+        You don't have any favorite memories yet!
+      </span>
+    </ion-row>
+
+    <div *ngIf="favorites">
+      <div *ngFor="let favorite of favorites">
+        <ion-row>
+          <ion-col>
+            <ion-card>    
+              <ion-card-content>
+                <img src={{favorite.imgfile}}>
+              </ion-card-content>
+
+            </ion-card>
+          </ion-col>
+          <ion-col>
+            <ion-card>    
+              <ion-card-content>
+                <img src={{favorite.imgfile}}>
+              </ion-card-content>
+        
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+
 </ion-content>
