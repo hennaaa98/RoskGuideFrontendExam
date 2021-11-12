@@ -11,6 +11,7 @@ declare var google: any;
 export class Tab2Page {
 
   map: any;
+  markers_backend: any;
 
   //references to HTML map
   @ViewChild('map', {read: ElementRef, static: false}) mapRef: ElementRef;
@@ -32,9 +33,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 16",
       opening_hours_sat: "Saturday: 10 - 16",
       opening_hours_sun: "Sunday: 13 - 16",
-      more_information: "https://roskildedomkirke.dk/",
-      more_information_name: "Roskilde Domkirke",
-      book: "https://roskildedomkirke.dk/besoeg/omvisninger",
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
@@ -50,9 +48,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 16",
       opening_hours_sat: "Saturday: 10 - 16",
       opening_hours_sun: "Sunday: 10 - 16",
-      more_information: "https://www.vikingeskibsmuseet.dk/",
-      more_information_name: "Vikingeskibsmuseet",
-      book: "https://www.vikingeskibsmuseet.dk/besoeg/aabningstider-og-priser",
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
     {
@@ -68,9 +63,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 16",
       opening_hours_sat: "Saturday: 10 - 16",
       opening_hours_sun: "Sunday: 10 - 16",
-      more_information: "https://roskildemuseum.dk/",
-      more_information_name: "Roskilde Museum",
-      book: "https://roskildemuseum.dk/dit-besoeg/",
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
@@ -86,9 +78,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 17",
       opening_hours_sat: "Saturday: 10 - 17",
       opening_hours_sun: "Sunday: 10 - 17",
-      more_information: "https://museumragnarock.dk/",
-      more_information_name: "Ragnarock Museum",
-      book: "https://museumragnarock.dk/rundvisningsbooking/",
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
     {
@@ -104,9 +93,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 12 - 17",
       opening_hours_sat: "Saturday: 11 - 16",
       opening_hours_sun: "Sunday: 11 - 16",
-      more_information: "https://www.samtidskunst.dk/",
-      more_information_name: "Museet for Samtidskunst",
-      book: "https://www.samtidskunst.dk/",
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
     {
@@ -122,9 +108,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 17 - 22",
       opening_hours_sat: "Saturday: 17 - 22",
       opening_hours_sun: "Sunday: Closed",
-      more_information: "https://disotto.dk/",
-      more_information_name: "Disotto",
-      book: "https://booking.quickorder.io/book/ck5mu3anb000007l5h4x4f2kz",
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
@@ -140,9 +123,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 17 - 22",
       opening_hours_sat: "Saturday: 09.45 - 14 & 17 - 22",
       opening_hours_sun: "Sunday: 09.45 - 14 & 16.45 - 21.30",
-      more_information: "https://www.ilden.dk/",
-      more_information_name: "Restaurant Ilden",
-      book: "https://www.ilden.dk/kontakt/",
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
@@ -158,9 +138,6 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 16 - 21",
       opening_hours_sat: "Saturday: 16 - 21",
       opening_hours_sun: "Sunday: 16 - 21",
-      more_information: "https://wokgourmet.dk/",
-      more_information_name: "Wok Gourmet",
-      book: "https://wokgourmet.dk/kontakt-os/",
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
   ];
@@ -235,16 +212,14 @@ export class Tab2Page {
                               '</div>' +
 
                               '<div>' +
-                                '<b style="font-size:15px;">More information</b>' +
-                                '<br>' +
-                                '<a href=' + marker.more_information + ' target=_blank>' + marker.more_information_name + '</a>' +
-                                '<br>' +
-                                '<br>' +
                                 '<span>' +
                                   '<ion-button id="navigate">Navigate</ion-button>' + 
                                 '</span>' +
                                 '<span>' +
-                                  '<ion-button id="navigate"><a href=' + marker.book + ' target=_blank style="color:white;text-decoration:none;">Book</a></ion-button>' + 
+                                  '<ion-button id="#"><ion-icon name="camera-outline"></ion-icon></ion-button>' + 
+                                '</span>' +
+                                '<span>' +
+                                  '<ion-button id="#"><ion-icon name="star-outline"></ion-icon></ion-button>' + 
                                 '</span>' +
                               '</div>' +
                             '</div>';
