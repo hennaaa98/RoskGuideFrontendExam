@@ -1,34 +1,21 @@
-.profile-title{
+.center-title {
     text-align: center;
-    padding: 1em 0;
-}
-.pad{
-    padding-bottom: 20px;
-    padding-left: 15px;
-}
-.center {
-    width: 100px;
+  }
+
+  h1 {
+    font-weight: bold;
+    padding: 2em 0.8em 0;
+  }
+
+  h4 {
+    padding: 0.2em 0 0 1.7em;
+  }
+
+  .search {
+    width: 340px;
     margin: 0 auto;
-}
-ion-icon{
-    padding: 0 5px 0 0;
-}
-.margin-right {
-    margin-right: 25px;
-}
-ion-title {
-    text-align: center;
-}
-ion-grid {
-    margin-top: 20px;
-    margin-bottom: -15px;
-}
-.no-padding {
-    padding-bottom: 0 !important;
-}
-.list-md {
-    padding-bottom: 0px;
-}
-.item-native {
-    padding-inline-start: 0px !important;
-}
+  }
+
+  .padding {
+    margin: 0 0.7em;
+  }

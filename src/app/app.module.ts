@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Camera } from '@ionic-native/camera/ngx';
 import { LocationComponent } from './components/location/location.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   declarations: [AppComponent, LocationComponent],
@@ -18,6 +19,7 @@ import { LocationComponent } from './components/location/location.component';
     IonicModule.forRoot(), 
     AppRoutingModule, 
     BrowserAnimationsModule,
+    MatExpansionModule
   ],
   providers: [
     Camera,

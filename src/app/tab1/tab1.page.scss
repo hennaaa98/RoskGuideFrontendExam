@@ -1,11 +1,18 @@
-#map {
-  height: 100%;
+h1 {
+  font-weight: bold;
+  padding: 2em 0.8em 0;
 }
 
-.center-title {
-  text-align: center;
+.padding {
+  padding: 2em 1.5em 0;
 }
 
-.firstHeading {
-  text-align: center;
+span.fav {
+  padding-left: 1em;
+  font-size: 15px;
+}
+
+.fav-padding {
+  padding: 2em 0 4em 3.5em;
+  font-weight: 200;
 }
