@@ -13,6 +13,7 @@ import { AboutKornComponent } from '../components/about-korn/about-korn.componen
 import { AboutC48Component } from '../components/about-c48/about-c48.component';
 import { AboutVivaldiComponent } from '../components/about-vivaldi/about-vivaldi.component';
 import { AboutRibHouseComponent } from '../components/about-rib-house/about-rib-house.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
 
@@ -21,7 +22,8 @@ import { AboutRibHouseComponent } from '../components/about-rib-house/about-rib-
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab3PageRoutingModule 
+    Tab3PageRoutingModule,
+    MatExpansionModule
   ],
   declarations: [
     Tab3Page, 

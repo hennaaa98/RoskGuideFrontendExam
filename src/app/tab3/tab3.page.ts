@@ -7,6 +7,7 @@ import { AboutKornComponent } from '../components/about-korn/about-korn.componen
 import { AboutC48Component } from '../components/about-c48/about-c48.component';
 import { AboutVivaldiComponent } from '../components/about-vivaldi/about-vivaldi.component';
 import { AboutRibHouseComponent } from '../components/about-rib-house/about-rib-house.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-tab3',
@@ -14,6 +15,8 @@ import { AboutRibHouseComponent } from '../components/about-rib-house/about-rib-
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+
+  filteredlocations: any;
 
   //We inject the popover controller to the constructor 
   constructor(public popoverController: PopoverController) {

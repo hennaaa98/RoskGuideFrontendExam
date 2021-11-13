@@ -13,10 +13,16 @@ export class Tab2Page {
   map: any;
   markers_backend: any;
 
+
   //references to HTML map
   @ViewChild('map', {read: ElementRef, static: false}) mapRef: ElementRef;
 
   infoWindows: any = [];
+
+  favourites: any = [
+     "Roskilde Domkirke",
+     "Roskilde Museum",
+  ]
 
   //An array of custom objects for Google markers
   markers: any = [
@@ -218,9 +224,10 @@ export class Tab2Page {
                                 '<span>' +
                                   '<ion-button id="#"><ion-icon name="camera-outline"></ion-icon></ion-button>' + 
                                 '</span>' +
-                                '<span>' +
-                                  '<ion-button id="#"><ion-icon name="star-outline"></ion-icon></ion-button>' + 
-                                '</span>' +
+                                // '<span>' +
+                                //   '<ion-button id="#"><ion-icon name="star-outline"></ion-icon></ion-button>' + 
+                                //   '<ion-button id="#"><ion-icon  name="star"></ion-icon></ion-button>' + 
+                                // '</span>' +
                               '</div>' +
                             '</div>';
     
