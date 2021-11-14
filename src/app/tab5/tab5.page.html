@@ -1,0 +1,61 @@
+<ion-content [fullscreen]="true">
+
+  <ion-row>
+    <ion-col>
+      <h1>My profile</h1>
+    </ion-col>
+  </ion-row>
+  
+    <!--Grid in list -->
+    <ion-list>
+       <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="center">
+              <img class="woman" src="./assets/img/woman.png">
+            </div>
+          </ion-col>
+          <ion-col class="margin-right">
+            <ion-text>
+              <h2>Sarah Hansen</h2>
+              <p class="text"><ion-icon name="location-outline"></ion-icon>Roskilde</p>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+      <!--Padding at the end -->
+      <ion-item class="no-padding">
+        <ion-label></ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+  
+      <!--the list/ content (+microinteractions)-->
+      <ion-item>
+        <ion-label class="pad" position="floating"><ion-icon name="ribbon-outline"></ion-icon>Achievements</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label class="pad" position="floating"><ion-icon name="person-outline"></ion-icon>Change profile picture</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="pad" position="floating"><ion-icon name="language-outline"></ion-icon>Change name</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label class="pad" position="floating"><ion-icon name="location-outline"></ion-icon>Change location</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+  
+      
+      <ion-item>
+        <ion-label class="pad" position="floating"><ion-icon name="log-out-outline"></ion-icon>Log out</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      
+    </ion-list>
+  </ion-content>
