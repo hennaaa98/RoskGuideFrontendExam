@@ -1,7 +1,6 @@
 h1 {
   text-align: center;
   padding-top: 70px;
-  font-weight: bold;
 }
   
 .logpad {
@@ -9,33 +8,36 @@ h1 {
   padding-left: 15px;
 }
   
+.brandicons {
+  font-size: 30px;
+  color:gray;
+}
+
 .signupinfo {
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 20px;
 }
-  
-.down {
-  padding-bottom: 80px;
-}
-
-.brandicons {
-  padding-left: 10px;
-  font-size: 30px;
-  color:gray;
-}
-
+    
 ion-text {
   text-align: center;
 }
 
-ion-button{
-  margin-top: 40px;
+ion-button { 
   padding: 0 60px 0 60px;
 }
 
 .icons {
   color:black;
+}
+  
+.wassa{
+  padding-bottom: 30px;
+  margin-right: 20px;
+}
+
+.already{
+  padding-top: 40px;
 }
 
 .input-icon {
@@ -45,11 +47,11 @@ ion-button{
   font-size: 20px;
   padding: 0px 10px 12px 0px;
 }
-
+  
 .no-padding {
   padding-bottom: 0 !important;
 }
-
-ion-input{
-  margin-left: 40px;
+    
+.bluetext {
+  text-align: right;
 }
