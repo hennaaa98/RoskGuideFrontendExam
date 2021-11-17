@@ -12,7 +12,7 @@
     <h4>Nearest locations</h4>
   </ion-text>
 
-  <div *ngFor="let location of filteredlocations">
+  <div *ngFor="let location of locations">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -27,10 +27,16 @@
         Navigate
       </ion-button>
     </mat-expansion-panel>
+    <ion-button (click)="favService.add(location); isFavorite=true;" *ngIf="!isFavorite" expand="block">
+      Add to Favorites
+    </ion-button>
+    <ion-button (click)="favService.remove(location); isFavorite=false;" *ngIf="isFavorite" expand="block">
+      Remove from Favorites
+    </ion-button>
   
   </div>
 
-  <ion-list>  
+  <!-- <ion-list>  
     <ion-item (click) ="aboutKaffeKilden()"> 
         <ion-icon name="restaurant" class="ion-justify-content-start"></ion-icon>
         <ion-label style="padding-left: 20px;">Kaffekilden</ion-label>
@@ -68,6 +74,6 @@
       <ion-icon name="newspaper"></ion-icon>
       <ion-icon name="return-up-forward-outline" style="padding-left: 20px;"></ion-icon>
     </ion-item>
-  
   </ion-list>
+   -->
 </ion-content>

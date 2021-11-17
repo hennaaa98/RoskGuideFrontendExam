@@ -32,7 +32,15 @@ import { MatExpansionModule } from '@angular/material/expansion';
     AboutKornComponent, 
     AboutC48Component, 
     AboutVivaldiComponent, 
-    AboutRibHouseComponent], // declare the component
-  entryComponents: [AboutKaffeKildenComponent, AboutSatchmoComponent, AboutKornComponent, AboutC48Component, AboutVivaldiComponent, AboutRibHouseComponent] // as well as declaring entry component.
+    AboutRibHouseComponent
+  ], // declare the component
+  entryComponents: 
+  [
+    AboutKaffeKildenComponent, 
+    AboutSatchmoComponent, 
+    AboutKornComponent, 
+    AboutC48Component, 
+    AboutVivaldiComponent, 
+    AboutRibHouseComponent] // as well as declaring entry component.
 })
 export class Tab3PageModule {}

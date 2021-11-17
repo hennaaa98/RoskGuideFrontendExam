@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab4Page implements OnInit {
 
+  badges: any;
+
   constructor() { }
 
   ngOnInit() {

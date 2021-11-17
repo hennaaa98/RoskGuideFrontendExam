@@ -1,0 +1,55 @@
+<ion-content [fullscreen]="true">
+  <h1>Sign up</h1>
+  
+  <!--Inputs -->
+  <div *ngIf="!submitted">
+    <ion-list>
+      <ion-item class="signupinfo"> 
+        <span item-right><ion-icon class="input-icon" name="person-outline"></ion-icon></span>
+        <ion-input type="text" placeholder="Type your full name" id="full_name" required [(ngModel)]="profile.full_name" name="full_name"></ion-input>
+      </ion-item>
+
+      <ion-item class="signupinfo"> 
+        <span item-right><ion-icon class="input-icon" name="at-outline"></ion-icon></span>
+        <ion-input type="email" placeholder="Type your email" id="email" required [(ngModel)]="profile.email" name="email"></ion-input>
+      </ion-item>
+    
+      <ion-item class="signupinfo"> 
+        <span item-right><ion-icon class="input-icon" name="call-outline"></ion-icon></span>
+        <ion-input type="text" placeholder="Type your phone number" id="telephone" required [(ngModel)]="profile.telephone" name="telephone"></ion-input>
+      </ion-item>
+    
+      <ion-item class="signupinfo"> 
+        <span item-right><ion-icon class="input-icon" name="location-outline"></ion-icon></span>
+        <ion-input type="text" placeholder="Type your permanent address" id="p_location" required [(ngModel)]="profile.p_location" name="p_location"></ion-input>
+      </ion-item>
+    
+      <!-- <ion-item class="signupinfo"> 
+        <span item-right><ion-icon class="input-icon" name="location-outline"></ion-icon></span>
+        <ion-input type="text" placeholder="Type your temporary address" id="t_location" required [(ngModel)]="profile.t_location" name="t_location"></ion-input>
+      </ion-item> -->
+
+      <ion-item class="signupinfo"> 
+        <span item-right><ion-icon class="input-icon" name="location-outline"></ion-icon></span>
+        <ion-input type="text" placeholder="Type your password" id="password" required [(ngModel)]="profile.password" name="password"></ion-input>
+      </ion-item>
+      
+      <ion-text class="bluetext" color="primary">
+        <p class="wassa">What's this?</p> 
+      </ion-text>
+          
+      <!--Log in button -->
+      <div *ngIf="!submitted">
+        <ion-button (click)="saveProfile()" [routerLink]="['/tabs/homepage']" expand="block">Sign up</ion-button>
+      </div>
+        <ion-text color="dark">
+        <p class="already">Already have an account?</p>
+      </ion-text>
+          
+      <!--Sign up -->
+      <ion-text color="danger">
+        <p>Log in here</p> 
+      </ion-text>
+    </ion-list>
+  </div>
+</ion-content>
