@@ -4,16 +4,22 @@
   <ion-list>    
     <ion-item class="signupinfo"> 
       <span item-right><ion-icon class="input-icon" name="person-outline"></ion-icon></span>
-      <ion-input class="input-text" type="text" placeholder="Enter email" [(ngModel)]="profile.email" required></ion-input>
+      <ion-input class="input-text" type="text" placeholder="Enter email" [(ngModel)]="email" required></ion-input>
     </ion-item>
 
     <ion-item class="signupinfo"> 
       <span item-right><ion-icon name="lock-closed-outline"></ion-icon></span>
-      <ion-input class="input-text" type="text" placeholder="Enter password" [(ngModel)]="profile.password" required></ion-input>
+      <ion-input class="input-text" type="text" placeholder="Enter password" [(ngModel)]="password" required></ion-input>
     </ion-item>
+
+    <ion-text>
+      <span *ngIf="loginFailed">
+        Wrong email or password!
+      </span>
+    </ion-text>
        
     <!--Log in button -->
-    <ion-button expand="block" [routerLink]="['/tabs/homepage']">Log in</ion-button>
+    <ion-button expand="block" (click)="Login()">Log in</ion-button>
     <ion-text color="dark">
       <p class="down">Forgot your password?</p>
     </ion-text>

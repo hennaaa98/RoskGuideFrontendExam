@@ -15,7 +15,7 @@
   <ion-row>
     <ion-list>
       <ion-item *ngFor="let location of favService.favLocations">
-        {{ location.name }}
+        {{ location.location_name }}
       </ion-item>
       <ion-item *ngIf="favService.favLocations?.length==0">
         You didn't choose any favorites yet!
