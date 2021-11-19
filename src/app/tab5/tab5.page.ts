@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab5Page implements OnInit {
 
+  full_name = "Sean";
+  address = "Holbæk";
+
   constructor() { }
 
   ngOnInit() {

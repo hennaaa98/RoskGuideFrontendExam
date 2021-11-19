@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
   profile: any;
   loginFailed: boolean = false;
 
-  postLogin() {
+  getLogin() {
     const data = {
       email: this.profile.email,
       password: this.profile.password

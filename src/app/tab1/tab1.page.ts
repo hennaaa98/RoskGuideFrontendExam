@@ -15,7 +15,7 @@ import { FavoritesService } from 'src/app/services/favorites.service';
 export class Tab1Page {
 
   favorites: any;
-  full_name = "Sofia";
+  full_name = "Sean";
 
   public favIDs: Array<number>;
   public favLocations: Array<any>;
@@ -47,25 +47,4 @@ export class Tab1Page {
 //     });
 //   });
 // }
-
-// add(location: { ID: number; }) {
-//   this.favIDs.push(location.ID);
-//   this.favLocations.push(location);
-//   this.storage.set('FavoritesIDs', this.favIDs);
-// }
-
-// remove(location: { ID: number; }) {
-//   let removeIndex:number = this.favIDs.indexOf(location.ID);
-//   if (removeIndex != -1) {
-//     this.favIDs.splice(removeIndex, 1);
-//     this.favLocations.splice(removeIndex, 1);
-//     this.storage.set('FavoritesIDs', this.favIDs);
-//   }
-// }
-
-// reorder(ev) {
-//   ev.detail.complete(this.favLocations);
-//   this.favIDs = this.favLocations.map(tour => tour.ID);
-//   this.storage.set('FavoritesIDs', this.favIDs);
-//   }
 }

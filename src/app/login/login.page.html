@@ -25,25 +25,27 @@
     </ion-text>
     
     <!--Sign up -->
-    <ion-text color="danger">
-      <a [routerLink]="['/signup']">Sign up here</a> 
-    </ion-text>
+    <div class="link">
+      <ion-text color="danger">
+        <a class="link" [routerLink]="['/signup']">Sign up here</a> 
+      </ion-text>
+    </div>
 
     <ion-grid>
       <ion-row>
-
-        <ion-col>
+        <ion-col class="social">
           <ion-icon class="brandicons" name="logo-facebook"></ion-icon>
           <ion-icon class="brandicons" name="logo-twitter"></ion-icon>
           <ion-icon class="brandicons" name="logo-google"></ion-icon>
         </ion-col>
-  
       </ion-row>
     </ion-grid>
     
     <!--Continue as guest -->
-    <ion-text color="danger">
-      <a [routerLink]="['/tabs/homepage']">Continue as guest</a> 
-    </ion-text>
+    <div class="link">
+      <ion-text>
+        <a style="color: #D46363;" [routerLink]="['/tabs/homepage']">Continue as guest</a> 
+      </ion-text>
+    </div>
   </ion-list>
 </ion-content>

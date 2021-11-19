@@ -1,6 +1,7 @@
 h1 {
   text-align: center;
   padding-top: 70px;
+  font-weight: bold;
 }
   
 .logpad {
@@ -32,12 +33,12 @@ ion-button {
 }
   
 .wassa{
-  padding-bottom: 30px;
-  margin-right: 20px;
+  padding: 1em 1.5em;
 }
 
 .already{
-  padding-top: 40px;
+  text-align: center;
+  padding: 1em 0 0;
 }
 
 .input-icon {
@@ -54,4 +55,15 @@ ion-button {
     
 .bluetext {
   text-align: right;
+}
+
+.signup {
+  margin: 2em 0 0;
+}
+
+.loginhere {
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+  color: #D46363;
 }

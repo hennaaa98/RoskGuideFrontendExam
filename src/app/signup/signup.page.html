@@ -21,7 +21,7 @@
     
       <ion-item class="signupinfo"> 
         <span item-right><ion-icon class="input-icon" name="location-outline"></ion-icon></span>
-        <ion-input type="text" placeholder="Type your permanent address" id="p_location" required [(ngModel)]="profile.p_location" name="p_location"></ion-input>
+        <ion-input type="text" placeholder="Type your address" id="p_location" required [(ngModel)]="profile.p_location" name="p_location"></ion-input>
       </ion-item>
     
       <!-- <ion-item class="signupinfo"> 
@@ -30,25 +30,26 @@
       </ion-item> -->
 
       <ion-item class="signupinfo"> 
-        <span item-right><ion-icon class="input-icon" name="location-outline"></ion-icon></span>
+        <span item-right><ion-icon class="input-icon" name="lock-closed-outline"></ion-icon></span>
         <ion-input type="text" placeholder="Type your password" id="password" required [(ngModel)]="profile.password" name="password"></ion-input>
       </ion-item>
       
-      <ion-text class="bluetext" color="primary">
+      <!-- <ion-text class="bluetext" color="primary">
         <p class="wassa">What's this?</p> 
-      </ion-text>
+      </ion-text> -->
           
       <!--Log in button -->
-      <div *ngIf="!submitted">
+      <div *ngIf="!submitted" class="signup">
         <ion-button (click)="saveProfile()" [routerLink]="['/tabs/homepage']" expand="block">Sign up</ion-button>
       </div>
-        <ion-text color="dark">
-        <p class="already">Already have an account?</p>
-      </ion-text>
-          
-      <!--Sign up -->
-      <ion-text color="danger">
-        <p>Log in here</p> 
+
+        <ion-text>
+        <p class="already">
+          Already have an account?
+        </p>
+        <p class="loginhere">
+          Log in here
+        </p> 
       </ion-text>
     </ion-list>
   </div>

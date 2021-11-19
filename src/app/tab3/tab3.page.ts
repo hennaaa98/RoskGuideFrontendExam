@@ -1,16 +1,7 @@
 import { Component } from '@angular/core';
-// import { PopoverController } from '@ionic/angular'; //import the popover controller
-// import { AboutKaffeKildenComponent } from '../components/about-kaffe-kilden/about-kaffe-kilden.component'; // import the component.
-// import { AboutSatchmoComponent } from '../components/about-satchmo/about-satchmo.component';
-// import { AboutKornComponent } from '../components/about-korn/about-korn.component';
-// import { AboutC48Component } from '../components/about-c48/about-c48.component';
-// import { AboutVivaldiComponent } from '../components/about-vivaldi/about-vivaldi.component';
-// import { AboutRibHouseComponent } from '../components/about-rib-house/about-rib-house.component';
 import { FavoritesService } from 'src/app/services/favorites.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-import * as _ from 'lodash';
 
 const baseUrl = 'http://localhost:8080/api/rosguide/';
 
@@ -38,20 +29,16 @@ export class Tab3Page {
 
   favorites: any;
   isFavorite: boolean;
- 
-  activatedRoute: any;
 
   
   getlocations() {
     return this.http.get('http://localhost:8080/api/rosguide/location');
   }
 
-  //We inject the popover controller to the constructor 
   constructor(
     private http: HttpClient, 
     public favService: 
-    FavoritesService, 
-    private route: ActivatedRoute) { }
+    FavoritesService) { }
 
   initialize() {
     this.getlocations().subscribe((data: any) => {
