@@ -247,7 +247,6 @@ export class Tab2Page {
           ;
         });
       });
-
     });
     this.infoWindows.push(infoWindow);
   }

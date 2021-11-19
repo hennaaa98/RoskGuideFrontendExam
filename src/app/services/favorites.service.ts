@@ -34,7 +34,7 @@ export class FavoritesService {
     window.localStorage.setItem('FavoritesIDs', JSON.stringify(this.favIDs));
   }
 
-  remove(location) {
+  remove(location: { ID: number; }) {
     let removeIndex:number = this.favIDs.indexOf(location.ID);
     if (removeIndex != -1) {
       this.favIDs.splice(removeIndex, 1);

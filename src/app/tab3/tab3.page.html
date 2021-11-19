@@ -8,72 +8,47 @@
 
   <ion-searchbar animated class="search"></ion-searchbar>
 
-  <ion-text style="color: #D46363">
-    <h4>Nearest locations</h4>
+  <ion-text>
+    <h4>
+      <a style="color: #D46363; cursor: pointer; text-decoration: underline;">Nearest locations</a>
+    </h4>
   </ion-text>
 
-  <div *ngFor="let location of locations">
+  <div *ngFor="let location of locations"> 
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          {{location.icon}}
+          <ion-icon name={{location.location_icon}}></ion-icon>
         </mat-panel-title>
-        <mat-panel-description>
-          {{location.name}}
-        </mat-panel-description>
+        <mat-panel-title>
+          <p class="title">
+            {{location.location_name}}
+          </p>
+        </mat-panel-title>
       </mat-expansion-panel-header>
-      <p>{{location.openinghours}}</p>
-      <ion-button>
-        Navigate
-      </ion-button>
+      <p class="desc">
+        Opening hours: {{location.location_openinghours}}
+      </p>
+      <p class="website">
+        <a class="website-link" href={{location.location_website}}>
+          Visit website
+        </a>
+      </p>
+      <ion-row>
+        <ion-col style="padding: 0;">
+          <ion-button (click)="navigateTo(location)">
+            Navigate
+          </ion-button>
+        </ion-col>
+        <ion-col style="padding: 0;">
+          <ion-button (click)="favService.add(location); isFavorite=true;" *ngIf="!isFavorite" expand="block">
+            <ion-icon name="star-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="favService.remove(location); isFavorite=false;" *ngIf="isFavorite" expand="block">
+            <ion-icon name="star"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
     </mat-expansion-panel>
-    <ion-button (click)="favService.add(location); isFavorite=true;" *ngIf="!isFavorite" expand="block">
-      Add to Favorites
-    </ion-button>
-    <ion-button (click)="favService.remove(location); isFavorite=false;" *ngIf="isFavorite" expand="block">
-      Remove from Favorites
-    </ion-button>
-  
-  </div>
-
-  <!-- <ion-list>  
-    <ion-item (click) ="aboutKaffeKilden()"> 
-        <ion-icon name="restaurant" class="ion-justify-content-start"></ion-icon>
-        <ion-label style="padding-left: 20px;">Kaffekilden</ion-label>
-        <ion-icon name="newspaper" style="padding-left: 20px;"></ion-icon>
-        <ion-icon name="return-up-forward-outline" style="padding-left: 20px;" ></ion-icon>
-    </ion-item>
-
-    <ion-item (click) ="aboutSatchmo()">
-      <ion-icon name="cafe"></ion-icon>
-      <ion-label style="padding-left: 20px;">Café Satchmo</ion-label>
-      <ion-icon name="newspaper" style="padding-left: 20px;"></ion-icon>
-      <ion-icon name="return-up-forward-outline" style="padding-left: 20px;" ></ion-icon>
-    </ion-item>
-    <ion-item (click) ="aboutKorn()">
-      <ion-icon name="cafe"></ion-icon>
-      <ion-label style="padding-left: 20px;">Café Korn</ion-label>
-      <ion-icon name="newspaper" style="padding-left: 20px;"></ion-icon>
-      <ion-icon name="return-up-forward-outline" style="padding-left: 20px;"></ion-icon>
-    </ion-item>
-    <ion-item (click) ="aboutC48()">
-      <ion-icon name="cafe"></ion-icon>
-      <ion-label style="padding-left: 20px;">Café 48</ion-label>
-      <ion-icon name="newspaper" style="padding-left: 20px;" ></ion-icon>
-      <ion-icon name="return-up-forward-outline" style="padding-left: 20px;"></ion-icon>
-    </ion-item>
-    <ion-item (click) ="aboutVivaldi()">
-      <ion-icon name="cafe"></ion-icon>
-      <ion-label style="padding-left: 20px;">Café Vivaldi</ion-label>
-      <ion-icon name="newspaper" style="padding-left: 20px;"></ion-icon>
-      <ion-icon name="return-up-forward-outline" style="padding-left: 20px;" ></ion-icon>
-    </ion-item>
-    <ion-item (click) ="aboutRibhouse()">
-      <ion-icon name="restaurant"></ion-icon>
-      <ion-label style="padding-left: 20px;">Rib House</ion-label>
-      <ion-icon name="newspaper"></ion-icon>
-      <ion-icon name="return-up-forward-outline" style="padding-left: 20px;"></ion-icon>
-    </ion-item>
-  </ion-list>
-   -->
+  </div> 
 </ion-content>

@@ -16,7 +16,8 @@ h1 {
 }
   
 .down {
-  padding-bottom: 80px;
+  padding: 1em 0 3em 0;
+  cursor: pointer;
 }
 
 .brandicons {
@@ -42,8 +43,6 @@ ion-button{
   color: black !important;
   margin: 15px 0 0 0 !important;
   background-color: transparent;
-  font-size: 20px;
-  padding: 0px 10px 12px 0px;
 }
 
 .no-padding {
@@ -52,4 +51,14 @@ ion-button{
 
 ion-input{
   margin-left: 40px;
+}
+
+.link {
+  text-align: center;
+  color: #D46363;
+}
+
+.social {
+  text-align: center;
+  margin: 0 0 4em 0;
 }

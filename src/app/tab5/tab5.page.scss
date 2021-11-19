@@ -7,33 +7,58 @@ h1 {
   text-align: center;
   padding: 1em 0;
 }
-.pad{
+.pad {
   padding-bottom: 20px;
   padding-left: 15px;
 }
+
+.padding {
+  padding: 1em 0 0;
+}
+
 .center {
   width: 100px;
   margin: 0 auto;
 }
-ion-icon{
+
+ion-icon {
   padding: 0 5px 0 0;
 }
+
 .margin-right {
   margin-right: 25px;
 }
+
 ion-title {
   text-align: center;
 }
+
 ion-grid {
   margin-top: 20px;
   margin-bottom: -15px;
 }
+
 .no-padding {
   padding-bottom: 0 !important;
 }
+
 .list-md {
   padding-bottom: 0px;
 }
+
 .item-native {
   padding-inline-start: 0px !important;
+}
+
+.width {
+  width: 100%;
+}
+
+ion-grid {
+  padding: 0;
+}
+
+.row-padding {
+  padding-top: 2em;
+  cursor: pointer;
 }
