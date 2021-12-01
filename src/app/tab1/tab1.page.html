@@ -1,7 +1,9 @@
-<ion-content>
+<ion-content [fullscreen]="true">
   <ion-row>
     <ion-col>
-      <h1>Hello, Sofia</h1>
+      <h1>
+        Hello, {{ full_name }} 
+      </h1>
     </ion-col>
   </ion-row>
 
@@ -9,15 +11,24 @@
     <ion-col class="padding">
       <ion-icon name="star-outline"></ion-icon>
       <span class="fav">Favorite locations</span>
+      <ion-row>
+        <span class="fav-padding">
+          You don't have any favorites yet!
+        </span>
+      </ion-row>
     </ion-col>
   </ion-row>
 
-  <div class="fav-container">
-    <ion-row>
-      <span class="fav-padding" *ngIf="favorites==null">
-        You don't have any favorites yet!
-      </span>
-    </ion-row>
+  <!-- <ion-row>
+    <ion-list>
+      <ion-item *ngFor="let location of favService.favLocations">
+        {{ location.location_name }}
+      </ion-item>
+      <ion-item *ngIf="favService.favLocations?.length==0">
+        You didn't choose any favorites yet!
+      </ion-item>
+    </ion-list>
+  </ion-row>
 
     <div *ngIf="favorites">
       <div *ngFor="let favorite of favorites">
@@ -32,10 +43,9 @@
           </ion-card>
         </ion-row>
       </div>
-    </div>
-  </div>
+    </div> -->
 
-  <div class="memory-container">
+  <!-- <div class="memory-container">
     <ion-row>
       <ion-col class="padding">
         <ion-icon name="star-outline"></ion-icon>
@@ -71,6 +81,6 @@
         </ion-row>
       </div>
     </div>
-  </div>
+  </div> -->
 
 </ion-content>

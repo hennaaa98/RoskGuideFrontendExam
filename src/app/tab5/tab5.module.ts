@@ -7,13 +7,17 @@ import { IonicModule } from '@ionic/angular';
 import { Tab5PageRoutingModule } from './tab5-routing.module';
 
 import { Tab5Page } from './tab5.page';
+import { MatExpansionModule } from '@angular/material/expansion'; 
+import { MatFormFieldModule } from '@angular/material/form-field'; 
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab5PageRoutingModule
+    Tab5PageRoutingModule,
+    MatExpansionModule,
+    MatFormFieldModule
   ],
   declarations: [Tab5Page]
 })

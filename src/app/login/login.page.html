@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true">
+  <h1>Login</h1>
+
+  <ion-list>    
+    <ion-item class="signupinfo"> 
+      <span item-right><ion-icon class="input-icon" name="person-outline"></ion-icon></span>
+      <ion-input class="input-text" type="text" placeholder="Enter email" [(ngModel)]="email" required></ion-input>
+    </ion-item>
+
+    <ion-item class="signupinfo"> 
+      <span item-right><ion-icon name="lock-closed-outline"></ion-icon></span>
+      <ion-input class="input-text" type="text" placeholder="Enter password" [(ngModel)]="password" required></ion-input>
+    </ion-item>
+
+    <ion-text>
+      <span *ngIf="loginFailed">
+        Wrong email or password!
+      </span>
+    </ion-text>
+       
+    <!--Log in button -->
+    <ion-button expand="block" (click)="Login()">Log in</ion-button>
+    <ion-text color="dark">
+      <p class="down">Forgot your password?</p>
+    </ion-text>
+    
+    <!--Sign up -->
+    <div class="link">
+      <ion-text color="danger">
+        <a class="link" [routerLink]="['/signup']">Sign up here</a> 
+      </ion-text>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="social">
+          <ion-icon class="brandicons" name="logo-facebook"></ion-icon>
+          <ion-icon class="brandicons" name="logo-twitter"></ion-icon>
+          <ion-icon class="brandicons" name="logo-google"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <!--Continue as guest -->
+    <div class="link">
+      <ion-text>
+        <a style="color: #D46363;" [routerLink]="['/tabs/homepage']">Continue as guest</a> 
+      </ion-text>
+    </div>
+  </ion-list>
+</ion-content>
