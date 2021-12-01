@@ -14,37 +14,28 @@ import { FavoritesService } from 'src/app/services/favorites.service';
 })
 export class Tab1Page {
 
-  favorites: any;
   full_name = "Sean";
 
-  public favIDs: Array<number>;
-  public favLocations: Array<any>;
-  storage: any;
-  location: any;
 
-  constructor(private profileService: ProfileService,
-    private route: ActivatedRoute,
-    private router: Router,
-    public favService: FavoritesService) {}
+  constructor() {}
   
   ngOnInit(){ 
 
   } 
 
-//   initialize(locations) {
-//     this.favLocations = [];
-//     this.storage.ready().then(() => {
-//     this.storage.get('FavoritesIDs').then(ids => {
-//       this.favIDs = ids;
-//         if (this.favIDs == null) {
-//           this.favIDs = [];
-//         } else {
-//           this.favIDs.forEach(favID => {
-//           let location = locations.filter(t => t.ID == favID)[0];
-//           this.favLocations.push(location);
-//         });
-//       }
-//     });
-//   });
-// }
+  spin(){
+    var x = 1024; //min value
+    var y = 9999; // max value
+
+    var deg = Math.floor(Math.random() * (x - y)) + y;
+
+    document.getElementById('box').style.transform = "rotate("+deg+"deg)";
+
+    var element = document.getElementById('mainbox');
+    element.classList.remove('animate');
+    setTimeout(function(){
+      element.classList.add('animate');
+    }, 5000); // 5 seconds
+
+  }
 }

@@ -9,78 +9,92 @@
 
   <ion-row>
     <ion-col class="padding">
-      <ion-icon name="star-outline"></ion-icon>
-      <span class="fav">Favorite locations</span>
-      <ion-row>
-        <span class="fav-padding">
-          You don't have any favorites yet!
-        </span>
-      </ion-row>
+      <h2>
+        Where to next? 
+      </h2>
+      <h3>
+        Let the wheel suggest your next visit!
+      </h3>
     </ion-col>
   </ion-row>
 
-  <!-- <ion-row>
-    <ion-list>
-      <ion-item *ngFor="let location of favService.favLocations">
-        {{ location.location_name }}
-      </ion-item>
-      <ion-item *ngIf="favService.favLocations?.length==0">
-        You didn't choose any favorites yet!
-      </ion-item>
-    </ion-list>
+  <ion-row>
+    <ion-col class="padding">
+      
+      <div id="mainbox" class="mainbox">
+        <div id="box" class="box">
+          <div class="box1">
+            <span class="span1 full-color"><b>Roskilde Domkirke</b></span>
+            <span class="span2 full-color"><b class="second">Vikingeskibsmuseet</b></span>
+            <span class="span3 full-color"><b class="third">Roskilde Museum</b></span>
+            <span class="span4 full-color"><b class="fourth">Ragnarock</b></span>
+          </div>
+          <div class="box2">
+            <span class="span1 pastel"><b class="fifth">Roskilde Havn</b></span>
+            <span class="span2 pastel"><b class="sixth">Maglekilde</b></span>
+            <span class="span3 pastel"><b class="seventh">Boserup Skov</b></span>
+            <span class="span4 pastel"><b class="eigth">Klosterkilden</b></span>
+          </div>
+        </div>
+
+        <button class="spin" (click)="spin()">SPIN</button>
+      </div>
+
+    </ion-col>
   </ion-row>
 
-    <div *ngIf="favorites">
-      <div *ngFor="let favorite of favorites">
-        <ion-row>
-          <ion-card>    
-            <ion-card-content>
-              <img src={{favorite.img}}>
-            </ion-card-content>
-            <ion-card-header>
-              <ion-card-title>{{favorite.title}}</ion-card-title>
-            </ion-card-header>
-          </ion-card>
-        </ion-row>
-      </div>
-    </div> -->
+  <br>
+  <br>
 
-  <!-- <div class="memory-container">
-    <ion-row>
-      <ion-col class="padding">
-        <ion-icon name="star-outline"></ion-icon>
-        <span class="fav">Favorite memories</span>
-      </ion-col>
-    </ion-row>
+  <ion-row>
+    <ion-col class="padding">
+      Make your trip easier with these apps!
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="padding">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="./assets/img/dot.jpg">
+      </a>
+    </ion-col>
+    <ion-col class="padding">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="./assets/img/rejseplanen.png">
+      </a>
+    </ion-col>
+    <ion-col class="padding">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="./assets/img/cphairport.png">
+      </a>
+    </ion-col>
+    <ion-col class="padding">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="./assets/img/zello.png">
+      </a>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="padding">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="./assets/img/tripadvisor.png">
+      </a>
+    </ion-col>
+    <ion-col class="padding">
+      <a href="https://www.apple.com/app-store/" target="_blank">
+        <img src="./assets/img/locals.jpg">
+      </a>
+    </ion-col>
+    <ion-col class="padding">
+
+    </ion-col>
+    <ion-col class="padding">
     
-    <ion-row>
-      <span class="fav-padding" *ngIf="favorites==null">
-        You don't have any favorite memories yet!
-      </span>
-    </ion-row>
+    </ion-col>
+  </ion-row>
 
-    <div *ngIf="favorites">
-      <div *ngFor="let favorite of favorites">
-        <ion-row>
-          <ion-col>
-            <ion-card>    
-              <ion-card-content>
-                <img src={{favorite.imgfile}}>
-              </ion-card-content>
-
-            </ion-card>
-          </ion-col>
-          <ion-col>
-            <ion-card>    
-              <ion-card-content>
-                <img src={{favorite.imgfile}}>
-              </ion-card-content>
-        
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </div>
-    </div>
-  </div> -->
+  <br>
+  <br>
 
 </ion-content>
