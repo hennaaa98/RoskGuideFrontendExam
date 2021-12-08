@@ -3,13 +3,13 @@ h1 {
   padding: 2em 0.8em 0;
 }
 
-.profile-title{
+.profile-title {
   text-align: center;
   padding: 1em 0;
 }
 .pad {
-  padding-bottom: 20px;
-  padding-left: 15px;
+  height: 3em;
+  padding: 0 1.5em;
 }
 
 .padding {
@@ -51,7 +51,11 @@ ion-grid {
 }
 
 .width {
-  width: 100%;
+  width: 100%; 
+}
+
+ion-item::part(native) {
+  padding-left: 0;
 }
 
 ion-grid {
@@ -61,4 +65,20 @@ ion-grid {
 .row-padding {
   padding-top: 2em;
   cursor: pointer;
+}
+
+.img {
+  margin: 0 -1em;
+}
+
+.mat-typography h2 {
+  margin: 0 !important;
+}
+
+.space {
+  margin: -3em 0;
+}
+
+.margin-bottom {
+  margin-bottom: 2em;
 }

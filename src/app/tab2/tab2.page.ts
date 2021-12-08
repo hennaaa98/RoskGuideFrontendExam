@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 declare var google: any;
 
@@ -27,6 +28,7 @@ export class Tab2Page {
   //An array of custom objects for Google markers
   markers: any = [
     {
+      id: 1,
       title: "Roskilde Domkirke",
       latitude: "55.64273732750571",
       longtitude: "12.079664784346173",
@@ -42,6 +44,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
+      id: 2,
       title: "Vikingeskibsmuseet",
       latitude: "55.651219199390404",
       longtitude: "12.080580289014042",
@@ -57,6 +60,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
     {
+      id: 3,
       title: "Roskilde Museum",
       latitude: "55.642832156820205",
       longtitude: "12.08402640596092",
@@ -72,6 +76,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
+      id: 4,
       title: "Ragnarock",
       latitude: "55.62837645709699",
       longtitude: "12.082424859925794",
@@ -87,6 +92,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
     {
+      id: 5,
       title: "Museet for Samtidskunst",
       latitude: "55.642584983009705",
       longtitude: "12.0817528059609879",
@@ -102,6 +108,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
     },
     {
+      id: 6,
       title: "Disotto",
       latitude: "55.63988668877055",
       longtitude: "12.069298171745864",
@@ -117,6 +124,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
+      id: 7,
       title: "Restaurant Ilden Roskilde",
       latitude: "55.64142729915131",
       longtitude: "12.09060525444214",
@@ -132,6 +140,7 @@ export class Tab2Page {
       icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
     },
     {
+      id: 8,
       title: "Wok Gourmet",
       latitude: "55.645560145272654",
       longtitude: "12.069355563340435",
@@ -148,7 +157,7 @@ export class Tab2Page {
     },
   ];
 
-  constructor() {}
+  constructor(public router: Router) {}
 
   ionViewDidEnter() {
     this.showMap();
@@ -222,12 +231,8 @@ export class Tab2Page {
                                   '<ion-button id="navigate">Navigate</ion-button>' + 
                                 '</span>' +
                                 '<span>' +
-                                  '<ion-button id="#"><ion-icon name="camera-outline"></ion-icon></ion-button>' + 
+                                  '<ion-button id="#"><ion-icon name="extension-puzzle-outline"></ion-icon></ion-button>' + 
                                 '</span>' +
-                                // '<span>' +
-                                //   '<ion-button id="#"><ion-icon name="star-outline"></ion-icon></ion-button>' + 
-                                //   '<ion-button id="#"><ion-icon  name="star"></ion-icon></ion-button>' + 
-                                // '</span>' +
                               '</div>' +
                             '</div>';
     
@@ -250,6 +255,7 @@ export class Tab2Page {
     });
     this.infoWindows.push(infoWindow);
   }
+  
 
   // Close window
   closeAllInfoWindows() {
@@ -269,5 +275,10 @@ export class Tab2Page {
     }
     this.map = new google.maps.Map(this.mapRef.nativeElement, options);
     this.addMarkersToMap(this.markers);
+  }
+
+  goToQuiz() {
+    console.log("hej");
+    this.router.navigate(['/tabs/quizzes']);
   }
 }

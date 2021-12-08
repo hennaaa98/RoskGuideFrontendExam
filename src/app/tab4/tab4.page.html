@@ -2,101 +2,60 @@
 
   <ion-row>
     <ion-col>
-      <h1>My badges</h1>
+      <h1>My quizzes</h1>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col class="padding">
-      <ion-icon name="medal-outline"></ion-icon>
-      <span class="fav">Unlocked badges</span>
+      <ion-icon name="extension-puzzle-outline"></ion-icon>
+      <span class="fav">Uncompleted quizzes</span>
     </ion-col>
   </ion-row>
 
   <ion-row class="badges-padding">
-    <ion-col>
-      <ion-card>
-        <img src="/assets/img/medal.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card>
-        <img src="/assets/img/luxembourg.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card>
-        <img src="/assets/img/sticky_note.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-  </ion-row>
+    <div *ngFor="let quiz of quizzes"> 
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <p class="title">
+              {{quiz.quiz_title}}
+            </p>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        
+        <div *ngFor="let quiz of quiz.questions">
+          <p class="desc">
+            <b>
+              {{ quiz.question_text }}
+            </b>
+          </p>
 
-  <ion-row class="badges-padding">
-    <ion-col>
-      <ion-card>
-        <img src="/assets/img/yemen_flag.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card>
-        <img src="/assets/img/sticker.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-    </ion-col>
+          <div *ngFor="let option of quiz.options">
+            <ion-button (click)="checkAnswer(option, $event)" class="options">
+              {{ option.option_text }}
+            </ion-button>
+          </div>
+
+          <br>
+          <br>
+        </div>
+
+        <ion-row>
+          <ion-button class="center" (click)="presentModal()">
+            Complete quiz
+          </ion-button>
+        </ion-row>
+        
+      </mat-expansion-panel>
+    </div> 
   </ion-row>
 
   <ion-row>
-    <ion-col class="padding">
-      <ion-icon name="medal-outline"></ion-icon>
-      <span class="fav">Locked badges</span>
-    </ion-col>
-  </ion-row>
-  
-  <ion-row class="badges-padding">
-    <ion-col>
-      <ion-card class="opacity">    
-        <img src="/assets/img/europe_flag.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="opacity">    
-        <img src="/assets/img/philippines.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="opacity">    
-        <img src="/assets/img/ukraine_flag.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
+    <ion-col class="padding extra">
+      <ion-icon name="extension-puzzle-outline"></ion-icon>
+      <span class="fav">Completed quizzes</span>
     </ion-col>
   </ion-row>
 
-  <ion-row class="badges-padding">
-    <ion-col>
-      <ion-card class="opacity">    
-        <img src="/assets/img/norway.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="opacity">    
-        <img src="/assets/img/bottle_cap.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card class="opacity">    
-        <img src="/assets/img/italy_flag.jpg">
-        <!-- <a href="https://www.vecteezy.com/free-vector/cartoon">Cartoon Vectors by Vecteezy</a> -->
-      </ion-card>
-    </ion-col>
-  </ion-row>
 </ion-content>

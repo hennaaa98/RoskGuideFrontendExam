@@ -8,10 +8,10 @@
   
   <!--Grid in list -->
   <ion-grid> 
-      <ion-row>
+      <ion-row class="margin-bottom">
         <ion-col>
           <div class="center">
-            <img class="woman" src="./assets/img/male.png">
+            <img class="img" src="./assets/img/male.png">
           </div>
         </ion-col>
         <ion-col class="margin-right">
@@ -24,9 +24,19 @@
 
       <ion-list class="padding">
         <ion-row>
-          <ion-item class="width">
+          <ion-item class="width space">
           </ion-item>
         </ion-row>
+
+        <ion-row class="row-padding">
+          <ion-item [routerLink]="['/coupons']"  class="width">
+            <ion-text class="pad">
+              <ion-icon name="pricetags-outline"></ion-icon>
+              My coupons
+            </ion-text>
+          </ion-item>
+        </ion-row>
+
         <ion-row class="row-padding">
           <ion-item class="width">
             <ion-text class="pad">
@@ -35,6 +45,7 @@
             </ion-text>
           </ion-item>
         </ion-row>
+
         <ion-row class="row-padding">
           <ion-item class="width">
             <ion-text class="pad">
@@ -43,8 +54,9 @@
             </ion-text>
           </ion-item>
         </ion-row>
+
         <ion-row class="row-padding">
-          <ion-item class="width">
+          <ion-item [routerLink]="['/login']" class="width">
             <ion-text class="pad">
               <ion-icon name="log-out-outline"></ion-icon>
               Log out
@@ -52,41 +64,6 @@
           </ion-item>
         </ion-row>
 
-        <!-- <ion-item>
-          <ion-label class="pad" position="floating">
-            <ion-icon name="person-outline"></ion-icon>
-            Change profile picture
-          </ion-label>
-        </ion-item>
-      </ion-row> -->
-
-      <!-- Padding at the end
-      <ion-item class="no-padding">
-        <ion-label></ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-  
-      the list/ content (+microinteractions)
-      
-      <ion-item>
-        <ion-label class="pad" position="floating"><ion-icon name="person-outline"></ion-icon>Change profile picture</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label class="pad" position="floating"><ion-icon name="language-outline"></ion-icon>Change name</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label class="pad" position="floating"><ion-icon name="location-outline"></ion-icon>Change location</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-label class="pad" position="floating"><ion-icon name="log-out-outline"></ion-icon>Log out</ion-label>
-        <ion-input></ion-input>
-      </ion-item>  -->
     </ion-list>
   </ion-grid>
 </ion-content>

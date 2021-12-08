@@ -45,6 +45,14 @@ const routes: Routes = [
   {
     path: 'signup', component: SignupPage,
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'coupons',
+    loadChildren: () => import('./coupons/coupons.module').then( m => m.CouponsPageModule)
   }
 ];
 
