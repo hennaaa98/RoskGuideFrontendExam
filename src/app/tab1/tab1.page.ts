@@ -1,7 +1,4 @@
 import { Component, Injectable } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ProfileService } from 'src/app/services/profile.service';
-import { FavoritesService } from 'src/app/services/favorites.service';
 
 @Injectable({
   providedIn: 'root'

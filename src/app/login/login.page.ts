@@ -23,13 +23,6 @@ export class LoginPage implements OnInit {
   profile: any;
   loginFailed: boolean = false;
 
-  getLogin() {
-    const data = {
-      email: this.profile.email,
-      password: this.profile.password
-    };
-  }
-
   constructor(private http: HttpClient, profileService: ProfileService, private router: Router) { }
 
   Login(){
@@ -42,11 +35,7 @@ export class LoginPage implements OnInit {
         this.loginFailed = true;
       }
     });
-  }
-
-  
-
-  
+  }  
 
   ngOnInit() {
 

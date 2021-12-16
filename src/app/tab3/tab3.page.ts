@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FavoritesService } from 'src/app/services/favorites.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -36,9 +35,7 @@ export class Tab3Page {
   }
 
   constructor(
-    private http: HttpClient, 
-    public favService: 
-    FavoritesService) { }
+    private http: HttpClient) { }
 
   initialize() {
     this.getlocations().subscribe((data: any) => {

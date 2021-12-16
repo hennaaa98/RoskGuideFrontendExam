@@ -74,22 +74,62 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { PreloadAllModules, RouterModule, Routes } from &#x27;@angular/router&#x27;;
-import { HomePage } from &#x27;./home/home.page&#x27;;
+import { LoginPage } from &#x27;./login/login.page&#x27;;
+import { SignupPage } from &#x27;./signup/signup.page&#x27;;
+import { StartpagePage } from &#x27;./startpage/startpage.page&#x27;;
 import { Tab1Page } from &#x27;./tab1/tab1.page&#x27;;
+import { Tab2Page } from &#x27;./tab2/tab2.page&#x27;;
+import { Tab3Page } from &#x27;./tab3/tab3.page&#x27;;
+import { Tab4Page } from &#x27;./tab4/tab4.page&#x27;;
+import { Tab5Page } from &#x27;./tab5/tab5.page&#x27;;
 
 const routes: Routes &#x3D; [
   {
-    path: &#x27;&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tabs/tabs.module&#x27;).then(m &#x3D;&gt; m.TabsPageModule)&quot;
+    path: &#x27;&#x27;, 
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tabs/tabs.module&#x27;).then( m &#x3D;&gt; m.TabsPageModule)&quot;
+  },
+  {
+    path: &#x27;startpage&#x27;, component: StartpagePage,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./startpage/startpage.module&#x27;).then( m &#x3D;&gt; m.StartpagePageModule)&quot;
   },
   { 
-    path: &#x27;createprofile&#x27;, component: HomePage
+    path: &#x27;homepage&#x27;, component: Tab1Page,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tab1/tab1.module&#x27;).then(m &#x3D;&gt; m.Tab1PageModule)&quot;
   },
-  { 
-    path: &#x27;map&#x27;, component: Tab1Page,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tabs/tabs.module&#x27;).then(m &#x3D;&gt; m.TabsPageModule)&quot;
+  {
+    path: &#x27;map&#x27;, component: Tab2Page,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tab2/tab2.module&#x27;).then( m &#x3D;&gt; m.Tab2PageModule)&quot;
+  },
+  {
+    path: &#x27;restaurants&#x27;, component: Tab3Page,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tab3/tab3.module&#x27;).then( m &#x3D;&gt; m.Tab3PageModule)&quot;
+  },
+  {
+    path: &#x27;badges&#x27;, component: Tab4Page,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tab4/tab4.module&#x27;).then( m &#x3D;&gt; m.Tab4PageModule)&quot;
+  },
+  {
+    path: &#x27;profile&#x27;, component: Tab5Page,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./tab5/tab5.module&#x27;).then( m &#x3D;&gt; m.Tab5PageModule)&quot;
+  },
+  {
+    path: &#x27;login&#x27;, component: LoginPage,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./login/login.module&#x27;).then( m &#x3D;&gt; m.LoginPageModule)&quot;
+  },
+  {
+    path: &#x27;signup&#x27;, component: SignupPage,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./signup/signup.module&#x27;).then( m &#x3D;&gt; m.SignupPageModule)&quot;
+  },
+  {
+    path: &#x27;modal&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./modal/modal.module&#x27;).then( m &#x3D;&gt; m.ModalPageModule)&quot;
+  },
+  {
+    path: &#x27;coupons&#x27;,
+    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./coupons/coupons.module&#x27;).then( m &#x3D;&gt; m.CouponsPageModule)&quot;
   }
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

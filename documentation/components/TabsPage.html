@@ -164,19 +164,26 @@ export class TabsPage {
         <pre class="line-numbers"><code class="language-html">&lt;ion-tabs&gt;
 
   &lt;ion-tab-bar slot&#x3D;&quot;bottom&quot;&gt;
-    &lt;ion-tab-button tab&#x3D;&quot;tab1&quot;&gt;
+    &lt;ion-tab-button tab&#x3D;&quot;homepage&quot;&gt;
       &lt;ion-icon name&#x3D;&quot;home-outline&quot;&gt;&lt;/ion-icon&gt;
     &lt;/ion-tab-button&gt;
 
-    &lt;ion-tab-button tab&#x3D;&quot;tab2&quot;&gt;
+    &lt;ion-tab-button tab&#x3D;&quot;map&quot;&gt;
       &lt;ion-icon name&#x3D;&quot;map-outline&quot;&gt;&lt;/ion-icon&gt;
     &lt;/ion-tab-button&gt;
 
-    &lt;ion-tab-button tab&#x3D;&quot;tab3&quot;&gt;
+    &lt;ion-tab-button tab&#x3D;&quot;restaurants&quot;&gt;
+      &lt;ion-icon name&#x3D;&quot;restaurant-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-tab-button&gt;
+
+    &lt;ion-tab-button tab&#x3D;&quot;quizzes&quot;&gt;
+      &lt;ion-icon name&#x3D;&quot;extension-puzzle-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-tab-button&gt;
+
+    &lt;ion-tab-button tab&#x3D;&quot;profile&quot;&gt;
       &lt;ion-icon name&#x3D;&quot;person-outline&quot;&gt;&lt;/ion-icon&gt;
     &lt;/ion-tab-button&gt;
   &lt;/ion-tab-bar&gt;
-
 &lt;/ion-tabs&gt;
 </code></pre>
     </div>
@@ -185,8 +192,16 @@ export class TabsPage {
                 <p class="comment">
                     <code>tabs.page.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss">.tab-selected{
+  background-color:#eea9a9;
+  
+}
+ion-tab-button{
+  background-color:#D46363;
+  ion-icon{
+      color: white;
+  }
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -214,8 +229,8 @@ export class TabsPage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-tabs>  <ion-tab-bar slot="bottom">    <ion-tab-button tab="tab1">      <ion-icon name="home-outline"></ion-icon>    </ion-tab-button>    <ion-tab-button tab="tab2">      <ion-icon name="map-outline"></ion-icon>    </ion-tab-button>    <ion-tab-button tab="tab3">      <ion-icon name="person-outline"></ion-icon>    </ion-tab-button>  </ion-tab-bar></ion-tabs></div>'
-    var COMPONENTS = [{'name': 'AboutC48Component', 'selector': 'app-about-c48'},{'name': 'AboutKaffeKildenComponent', 'selector': 'app-about-kaffe-kilden'},{'name': 'AboutKornComponent', 'selector': 'app-about-korn'},{'name': 'AboutRibHouseComponent', 'selector': 'app-about-rib-house'},{'name': 'AboutSatchmoComponent', 'selector': 'app-about-satchmo'},{'name': 'AboutVivaldiComponent', 'selector': 'app-about-vivaldi'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LocationComponent', 'selector': 'app-location'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsPage', 'selector': 'app-tabs'}];
+        var COMPONENT_TEMPLATE = '<div><ion-tabs>  <ion-tab-bar slot="bottom">    <ion-tab-button tab="homepage">      <ion-icon name="home-outline"></ion-icon>    </ion-tab-button>    <ion-tab-button tab="map">      <ion-icon name="map-outline"></ion-icon>    </ion-tab-button>    <ion-tab-button tab="restaurants">      <ion-icon name="restaurant-outline"></ion-icon>    </ion-tab-button>    <ion-tab-button tab="quizzes">      <ion-icon name="extension-puzzle-outline"></ion-icon>    </ion-tab-button>    <ion-tab-button tab="profile">      <ion-icon name="person-outline"></ion-icon>    </ion-tab-button>  </ion-tab-bar></ion-tabs></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CouponsPage', 'selector': 'app-coupons'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'ModalPage', 'selector': 'app-modal'},{'name': 'SignupPage', 'selector': 'app-signup'},{'name': 'StartpagePage', 'selector': 'app-startpage'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'Tab4Page', 'selector': 'app-tab4'},{'name': 'Tab5Page', 'selector': 'app-tab5'},{'name': 'TabsPage', 'selector': 'app-tabs'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'TabsPage'};
 </script>

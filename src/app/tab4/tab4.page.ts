@@ -15,7 +15,7 @@ export class Tab4Page implements OnInit {
   quiz_title: string;
 
   getquizzes(id: number) {
-    return this.http.get('http://localhost:8080/api/rosguide/quiz?profile_id='+id);
+    return this.http.get('http://localhost:8080/api/rosguide/quiz?location_id='+id);
   }
 
   constructor( private http: HttpClient, 
@@ -25,12 +25,7 @@ export class Tab4Page implements OnInit {
   async presentModal() {
     const modal = await this.modalController.create({
       component: ModalPage,
-      cssClass: 'modal.page.scss',
-      componentProps: {
-        'firstName': 'Douglas',
-        'lastName': 'Adams',
-        'middleInitial': 'N'
-      }
+      cssClass: 'modal.page.scss'
     });
   
     return await modal.present();
@@ -44,19 +39,7 @@ export class Tab4Page implements OnInit {
     }
 
   ngOnInit() {
-
     this.getquiz();
-  
-  }
-
-  status = [
-    'unselected',
-    'correct',
-    'incorrect'
-  ]
-
-  select(index:number){
-    return this.status[index];
   }
 
   checkAnswer(option: any, event) {
@@ -67,5 +50,4 @@ export class Tab4Page implements OnInit {
     }
     else this.renderer.setAttribute(event.target, 'color', 'danger');
   }
-
 }

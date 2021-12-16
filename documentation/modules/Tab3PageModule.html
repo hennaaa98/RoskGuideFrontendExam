@@ -160,25 +160,25 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { IonicModule } from &#x27;@ionic/angular&#x27;;
-import { RouterModule } from &#x27;@angular/router&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
 import { Tab3Page } from &#x27;./tab3.page&#x27;;
-import { ExploreContainerComponentModule } from &#x27;../explore-container/explore-container.module&#x27;;
 
 import { Tab3PageRoutingModule } from &#x27;./tab3-routing.module&#x27;;
+import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
 
 @NgModule({
+
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
-    RouterModule.forChild([{ path: &#x27;&#x27;, component: Tab3Page }]),
     Tab3PageRoutingModule,
+    MatExpansionModule
   ],
-  declarations: [Tab3Page]
+  declarations: 
+  [ Tab3Page ]
 })
 export class Tab3PageModule {}
 </code></pre>
