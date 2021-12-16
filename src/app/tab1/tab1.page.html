@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <ion-row>
-    <ion-col>
+    <ion-col class="background">
       <h1>
         Hello, {{ full_name }} 
       </h1>
@@ -29,7 +29,7 @@
             <span class="span3 full-color"><b class="third">Roskilde Museum</b></span>
             <span class="span4 full-color"><b class="fourth">Ragnarock</b></span>
           </div>
-          <div class="box2">
+          <div class="box2" [routerLink]="['/tabs/map']">
             <span class="span1 pastel"><b class="fifth">Roskilde Havn</b></span>
             <span class="span2 pastel"><b class="sixth">Maglekilde</b></span>
             <span class="span3 pastel"><b class="seventh">Boserup Skov</b></span>
@@ -46,7 +46,7 @@
   <br>
   <br>
 
-  <ion-row>
+  <!-- <ion-row>
     <ion-col class="padding">
       Make your trip easier with these apps!
     </ion-col>
@@ -95,6 +95,6 @@
   </ion-row>
 
   <br>
-  <br>
+  <br> -->
 
 </ion-content>

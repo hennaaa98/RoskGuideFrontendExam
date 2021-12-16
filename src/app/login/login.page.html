@@ -7,13 +7,13 @@
       <ion-input class="input-text" type="text" placeholder="Enter email" [(ngModel)]="email" required></ion-input>
     </ion-item>
 
-    <ion-item class="signupinfo"> 
+    <ion-item class="signupinfo space"> 
       <span item-right><ion-icon name="lock-closed-outline"></ion-icon></span>
       <ion-input class="input-text" type="text" placeholder="Enter password" [(ngModel)]="password" required></ion-input>
     </ion-item>
 
     <ion-text>
-      <span *ngIf="loginFailed">
+      <span class="wrong" *ngIf="loginFailed">
         Wrong email or password!
       </span>
     </ion-text>

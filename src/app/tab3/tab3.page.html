@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
 
   <ion-row>
-    <ion-col>
+    <ion-col class="background">
       <h1>Restaurants & cafes</h1>
     </ion-col>
   </ion-row>
@@ -38,14 +38,6 @@
         <ion-col style="padding: 0;">
           <ion-button (click)="navigateTo(location)">
             Navigate
-          </ion-button>
-        </ion-col>
-        <ion-col style="padding: 0;">
-          <ion-button (click)="favService.add(location); isFavorite=true;" *ngIf="!isFavorite" expand="block">
-            <ion-icon name="star-outline"></ion-icon>
-          </ion-button>
-          <ion-button (click)="favService.remove(location); isFavorite=false;" *ngIf="isFavorite" expand="block">
-            <ion-icon name="star"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>

@@ -41,7 +41,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 16",
       opening_hours_sat: "Saturday: 10 - 16",
       opening_hours_sun: "Sunday: 13 - 16",
-      icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/333333/treasure-chest.png"
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 16",
       opening_hours_sat: "Saturday: 10 - 16",
       opening_hours_sun: "Sunday: 10 - 16",
-      icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/f1c40f/closed-treasure-chest.png"
     },
     {
       id: 3,
@@ -73,7 +73,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 16",
       opening_hours_sat: "Saturday: 10 - 16",
       opening_hours_sun: "Sunday: 10 - 16",
-      icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/333333/closed-treasure-chest.png"
     },
     {
       id: 4,
@@ -89,7 +89,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 10 - 17",
       opening_hours_sat: "Saturday: 10 - 17",
       opening_hours_sun: "Sunday: 10 - 17",
-      icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/333333/closed-treasure-chest.png"
     },
     {
       id: 5,
@@ -105,7 +105,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 12 - 17",
       opening_hours_sat: "Saturday: 11 - 16",
       opening_hours_sun: "Sunday: 11 - 16",
-      icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/f1c40f/closed-treasure-chest.png"
     },
     {
       id: 6,
@@ -121,7 +121,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 17 - 22",
       opening_hours_sat: "Saturday: 17 - 22",
       opening_hours_sun: "Sunday: Closed",
-      icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/333333/closed-treasure-chest.png"
     },
     {
       id: 7,
@@ -137,7 +137,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 17 - 22",
       opening_hours_sat: "Saturday: 09.45 - 14 & 17 - 22",
       opening_hours_sun: "Sunday: 09.45 - 14 & 16.45 - 21.30",
-      icon: "https://img.icons8.com/ios-filled/35/000000/closed-treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/333333/closed-treasure-chest.png"
     },
     {
       id: 8,
@@ -153,7 +153,7 @@ export class Tab2Page {
       opening_hours_fri: "Friday: 16 - 21",
       opening_hours_sat: "Saturday: 16 - 21",
       opening_hours_sun: "Sunday: 16 - 21",
-      icon: "https://img.icons8.com/ios-filled/35/D46363/treasure-chest.png"
+      icon: "https://img.icons8.com/ios-filled/35/333333/closed-treasure-chest.png"
     },
   ];
 
